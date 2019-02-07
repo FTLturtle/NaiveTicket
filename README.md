@@ -1,3 +1,5 @@
+NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 41 how to get the .md file to show new lines, and not because I think it's a good idea to write method declaration all on one line. If you go into the editor, you will see that I have split the code up into separate lines.
+
 # NaiveTicket
 
 The second Objects lab, from the BlueJ book's second chapter.
@@ -247,9 +249,11 @@ public TicketMachine(){
 This has the effect that BlueJ no longer asks for the ticketPrice.
 
 2.40
+```
 public void empty(){  
     this.total = 0;  
 }  
+```
 
 This method does not need to take any parameters. This method is a mutator, because it changes (or mutates) the value of a field.
 
