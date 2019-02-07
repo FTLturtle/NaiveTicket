@@ -317,7 +317,7 @@ in the first case, the total is always updated by the balance, and the balance i
 No, because the method checks to make sure that balance is equal to or greater than price before subtracting price. Thus, balance can never go below zero simply by subtracting price.
 
 2.48
-Appendix D not provided. However, docs.oracle.com provides the following reference guide:
+Appendix D not provided. However, docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html provides the following reference guide:
 
 ```
 The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases.
@@ -370,3 +370,5 @@ Bitwise and Bit Shift Operators
 ^       Bitwise exclusive OR
 |       Bitwise inclusive OR
 ```
+
+2.49
