@@ -406,3 +406,40 @@ just run this method with any balance that is greater than zero, and you will se
 The IDE gives us two error messages. If you just had `return balance;` in the method, without the statement after it, the code would compile. The reason these errors occur is because the Java compiler checks to make sure that every statement is reachable, and the statement after the return statement is unreachable, because return statements will always cause a method to stop.
 
 2.55
+```java
+public int emptyMachine() {
+	int totalReturn = total;
+	total = 0;
+	return totalReturn;
+}
+```
+
+2.56
+I would argue that this is just a mutator and not both a mutator and an accessor. That is because, while it changes the value of the field total (thus changing the state of the object, making it a mutator), the variable that it returns (totalReturn) is not a field of the object, and therefore is not indicative of the object's current state.
+
+2.57
+```java
+	int amountLeftToPay = price - balance;
+        
+        if(amountLeftToPay <= 0) {
+            // Simulate the printing of a ticket.
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
+
+            // Update the total collected with the price.
+            total = total + price;
+            // Reduce the balance by the prince.
+            balance = balance - price;
+        }
+        else {
+            System.out.println("You must insert at least: " +
+                               (amountLeftToPay) + " more cents.");
+                    
+        }
+```
+
+2.58 is not required since it's a challenge exercise
