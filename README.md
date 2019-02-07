@@ -205,9 +205,9 @@ Done
 the fact that it has a return type immediately tells us that it cannot be a constructor.
 
 2.30
-public void setPrice(int ticketCost){
+`public void setPrice(int ticketCost){
 	this.price = ticketCost;
-}
+}`
 
 2.31
 this.score = this.score + points;
