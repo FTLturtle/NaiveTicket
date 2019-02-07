@@ -281,7 +281,92 @@ public TicketMachine(int ticketPrice){
 }
 ```
 
-starting with exercise 2.42, the chapter asks us to use the better-ticket-machine project, which I found at the following GitHub address: https://github.com/miguelbayon/better-ticket-machine/blob/master/TicketMachine.java
+starting with exercise 2.43, the chapter asks us to use the better-ticket-machine project, which I found at the following GitHub address: https://github.com/miguelbayon/better-ticket-machine/blob/master/TicketMachine.java
 
-I then forked it to my own GitHub account, and it's address is this: https://github.com/FTLturtle/better-ticket-machine
+I then forked it to my own GitHub account, and cloned it to my local machine. It's GitHub address is this: https://github.com/FTLturtle/better-ticket-machine
 
+2.43
+TicketMachine behaves as described. When an error message is reported, the balance does not change. if I enter zero, most likely an error message will tell me that i need to enter a positive value, and the value of balance will not be changed.
+
+My guess was correct.
+
+2.44
+In this case, entering zero as an argument when calling insertMoney will not cause an error message, and the method will run normally. This is not a problem, since adding zero will simply leave the balance the same as it was before, which is what you would want the method to do anyway.
+
+2.45
+The boolean in the shapes project was boolean isVisible, which controlled whether or not the circle object was visible on the canvas.
+
+Yes, this feature was well suited to being controlled by a type with only two different values, since the circle can only have two states of visibility - visible and invisible.
+
+2.46
+```java
+total = total + balance;
+balance = 0;
+```
+
+vs
+
+```java
+total = total + price;
+balance = balance - price;
+```
+
+in the first case, the total is always updated by the balance, and the balance is always reset to 0, causing strange behavior that is unwanted in a ticket machine. In the second case, the total is updated by the price of the ticket that was just printed, and the balance is updated by subtracting the price of the ticket that was just printed. Clearly the second case is better behavior for a ticket machine, because it avoids the problems of printing tickets that have not been fully paid for as well as the machine simply stealing the money of the customer if they put in more money than necessary to purchase the ticket.
+
+2.47
+No, because the method checks to make sure that balance is equal to or greater than price before subtracting price. Thus, balance can never go below zero simply by subtracting price.
+
+2.48
+Appendix D not provided. However, docs.oracle.com provides the following reference guide:
+
+```
+The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases.
+
+Summary of Operators
+The following quick reference summarizes the operators supported by the Java programming language.
+
+Simple Assignment Operator
+=       Simple assignment operator
+Arithmetic Operators
++       Additive operator (also used
+        for String concatenation)
+-       Subtraction operator
+*       Multiplication operator
+/       Division operator
+%       Remainder operator
+Unary Operators
++       Unary plus operator; indicates
+        positive value (numbers are 
+        positive without this, however)
+-       Unary minus operator; negates
+        an expression
+++      Increment operator; increments
+        a value by 1
+--      Decrement operator; decrements
+        a value by 1
+!       Logical complement operator;
+        inverts the value of a boolean
+Equality and Relational Operators
+==      Equal to
+!=      Not equal to
+>       Greater than
+>=      Greater than or equal to
+<       Less than
+<=      Less than or equal to
+Conditional Operators
+&&      Conditional-AND
+||      Conditional-OR
+?:      Ternary (shorthand for 
+        if-then-else statement)
+Type Comparison Operator
+instanceof      Compares an object to 
+                a specified type 
+Bitwise and Bit Shift Operators
+~       Unary bitwise complement
+<<      Signed left shift
+>>      Signed right shift
+>>>     Unsigned right shift
+&       Bitwise AND
+^       Bitwise exclusive OR
+|       Bitwise inclusive OR
+```
