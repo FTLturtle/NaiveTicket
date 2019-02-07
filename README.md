@@ -1,4 +1,4 @@
-NOTE TO GRADER: in my answers for exercises 1 thru 39, many of my code fragments may appear to be written as if they were only one line. This is only because I didn't figure out until exercise 40 how to get the markdown file to show code fragments properly. I know that it's not a good idea to write code all on the same line. If you go view this markdown file in the editor, you will see that I have actually split my code up into separate lines in the editor.
+NOTE TO GRADER: in my answers for exercises 1 thru 39, many of my code fragments may appear to be written as if they were only one line. This is only because I didn't figure out until exercise 40 how to get the markdown file to show code fragments properly. I know that it's not a good idea to write code all on the same line. If you go view this markdown file in the editor, you will see that I have actually split my code up into separate lines in the editor
 
 # NaiveTicket
 
