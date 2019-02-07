@@ -280,3 +280,8 @@ public TicketMachine(int ticketPrice){
 	this.total = 0;
 }
 ```
+
+starting with exercise 2.42, the chapter asks us to use the better-ticket-machine project, which I found at the following GitHub address: https://github.com/miguelbayon/better-ticket-machine/blob/master/TicketMachine.java
+
+I then forked it to my own GitHub account, and it's address is this: https://github.com/FTLturtle/better-ticket-machine
+
