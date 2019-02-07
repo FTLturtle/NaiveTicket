@@ -247,9 +247,9 @@ public TicketMachine(){
 This has the effect that BlueJ no longer asks for the ticketPrice.
 
 2.40
-public void empty(){ . 
+public void empty(){  
     this.total = 0;  
-} . 
+}  
 
 This method does not need to take any parameters. This method is a mutator, because it changes (or mutates) the value of a field.
 
