@@ -1,4 +1,4 @@
-NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 41 how to get the .md file to show new lines, and not because I think it's a good idea to write method declaration all on one line. If you go into the editor, you will see that I have split the code up into separate lines.
+NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 40 how to get the .md file to show code fragments properly, and not because I think it's a good idea to write method declarations all on one line. If you go into the editor, you will see that I have actually split the code up into separate lines.
 
 # NaiveTicket
 
@@ -187,9 +187,9 @@ They are exactly the same structure, just used to access different fields.
 No it does not.
 
 2.24
-`public int getTotal(){
+public int getTotal(){
 	return total;
-}`
+}
 
 2.25
 missing return statement
@@ -249,7 +249,7 @@ public TicketMachine(){
 This has the effect that BlueJ no longer asks for the ticketPrice.
 
 2.40
-```
+```java
 public void empty(){  
     this.total = 0;  
 }  
