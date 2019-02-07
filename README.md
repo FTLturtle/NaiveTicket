@@ -1,4 +1,4 @@
-NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 40 how to get the .md file to show code fragments properly, and not because I think it's a good idea to write method declarations all on one line. If you go into the editor, you will see that I have actually split the code up into separate lines.
+NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 40 how to get the .md file to show code fragments properly, and not because I think it's a good idea to write method declarations all on one line. If you go view this markdown file in the editor, you will see that I have actually split the code up into separate lines.
 
 # NaiveTicket
 
@@ -255,6 +255,28 @@ public void empty(){
 }  
 ```
 
-This method does not need to take any parameters. This method is a mutator, because it changes (or mutates) the value of a field.
+This method does not need to take any parameters.
+
+This method is a mutator, because it changes (or mutates) the value of a field.
 
 2.41
+```java
+public void setPrice(int newPrice){
+	this.price = newPrice;
+}
+```
+
+Yes, this method is a mutator.
+
+2.42
+```java
+public TicketMachine(){
+	this(1000); // default value of price is 1000 cents
+}
+
+public TicketMachine(int ticketPrice){
+	this.price = ticketPrice;
+	this.balance = 0;
+	this.total = 0;
+}
+```
