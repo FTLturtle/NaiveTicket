@@ -1,3 +1,5 @@
+NOTE TO GRADER: I learned around about exercise 41 that I need to use newline symbols in order for the readme to show new lines
+
 # NaiveTicket
 
 The second Objects lab, from the BlueJ book's second chapter.
@@ -247,9 +249,9 @@ public TicketMachine(){
 This has the effect that BlueJ no longer asks for the ticketPrice.
 
 2.40
-public void empty(){
-    this.total = 0;
-}
+public void empty(){\n
+    this.total = 0;\n
+}\n
 
 This method does not need to take any parameters. This method is a mutator, because it changes (or mutates) the value of a field.
 
