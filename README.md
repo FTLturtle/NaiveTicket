@@ -1,4 +1,4 @@
-NOTE TO GRADER: many of my code segments appear to be on the same line. This is only because I didn't figure out until exercise 40 how to get the .md file to show code fragments properly, and not because I think it's a good idea to write method declarations all on one line. If you go view this markdown file in the editor, you will see that I have actually split the code up into separate lines.
+NOTE TO GRADER: in my answers for exercises 1 thru 39, many of my code fragments may appear to be written as if they were only one line. This is only because I didn't figure out until exercise 40 how to get the markdown file to show code fragments properly. I know that it's not a good idea to write code all on the same line. If you go view this markdown file in the editor, you will see that I have actually split the code up into separate lines.
 
 # NaiveTicket
 
@@ -175,7 +175,7 @@ READ upto and INCLUDING section 2.15 of this chapter.
 this.name = petsName;
 
 2.20
-The problem is that you declare a new int price that is limited to the scope of the constructor method, and you assign ticketCost to that. Thus, the object field price is never set.
+The problem is that you declare a new local variable price (which has the same name as the field price), and you assign ticketCost to that variable instead of the field price.
 
 2.21
 They are exactly the same structure, just used to access different fields.
@@ -317,7 +317,7 @@ in the first case, the total is always updated by the balance, and the balance i
 No, because the method checks to make sure that balance is equal to or greater than price before subtracting price. Thus, balance can never go below zero simply by subtracting price.
 
 2.48
-Appendix D not provided. However, docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html provides the following reference guide:
+Appendix D not provided. However, docs.oracle.com/javase/tutorial/java/nutsandbolts/opsummary.html provides the following reference to all of the operators supported by the Java programming language. For my own edification, I have copied and pasted the contents below:
 
 ```
 The Java Tutorials have been written for JDK 8. Examples and practices described in this page don't take advantage of improvements introduced in later releases.
@@ -372,3 +372,37 @@ Bitwise and Bit Shift Operators
 ```
 
 2.49
+```java
+double saving = price * discount;
+```
+
+2.50
+```java
+double mean = (double)total / count; // Since total and count are both ints (probably), I needed to cast one of them to type double to make sure that the / is performing double division rather than int division.
+```
+
+2.51
+```java
+if (price > budget){
+	System.out.println("Too expensive");
+} else{
+	System.out.println("Just right");
+}
+```
+
+2.52
+```java
+if (price > budget){
+	System.out.println("Too expensive. Your budget is " + budget);
+} else{
+	System.out.println("Just right");
+}
+```
+
+2.53
+just run this method with any balance that is greater than zero, and you will see that it will always return zero, which is the wrong behavior for this method.
+
+2.54
+The IDE gives us two error messages. If you just had `return balance;` in the method, without the statement after it, the code would compile. The reason these errors occur is because the Java compiler checks to make sure that every statement is reachable, and the statement after the return statement is unreachable, because return statements will always cause a method to stop.
+
+2.55
